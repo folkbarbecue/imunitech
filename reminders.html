@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ImuniTech — Lembretes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="high-contrast">
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header" role="banner">
+    <h1>ImuniTech</h1>
+    <nav aria-label="Principal">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="reminders.html" aria-current="page">Lembretes</a>
+      <a href="info.html">Informações</a>
+      <a href="gamification.html">Gamificação</a>
+      <a href="index.html" id="logout2">Sair</a>
+    </nav>
+  </header>
+  <main id="main" class="container" role="main">
+    <section class="card" aria-labelledby="rem-title">
+      <h2 id="rem-title">Lembretes e Alertas</h2>
+      <form id="reminderForm">
+        <label for="remText">Lembrete</label>
+        <input id="remText" required>
+        <label for="remTime">Quando (ex: 2025-11-05T09:00)</label>
+        <input id="remTime" type="datetime-local" required>
+        <button type="submit" class="primary">Salvar lembrete</button>
+      </form>
+      <ul id="reminderList" class="list" role="list"></ul>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <small>© ImuniTech</small>
+  </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/voice.js" defer></script>
+</body>
+</html>
