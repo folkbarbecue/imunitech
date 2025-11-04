@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ImuniTech — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="high-contrast">
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header" role="banner">
+    <h1>ImuniTech</h1>
+    <nav aria-label="Principal">
+      <a href="dashboard.html" aria-current="page">Dashboard</a>
+      <a href="reminders.html">Lembretes</a>
+      <a href="info.html">Informações</a>
+      <a href="gamification.html">Gamificação</a>
+      <a href="index.html" id="logout">Sair</a>
+    </nav>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="dashboard-main">
+      <section class="panel vaccine-card" aria-labelledby="card-title">
+        <div class="card-header">
+          <img src="assets/recife-logo.png" alt="Prefeitura do Recife" class="city-logo">
+          <h2 id="card-title">Cartão de Vacinação Digital</h2>
+        </div>
+        <div class="card-content">
+          <div class="user-info">
+            <p>Nome: <strong id="userName">Cidadão Digital</strong></p>
+            <p>CNS: <strong id="userCNS">000 0000 0000 0000</strong></p>
+            <div class="qr-code" id="vaccineQR">
+              <!-- QR Code placeholder -->
+            </div>
+          </div>
+          <div class="vaccine-history" id="vaccineHistory">
+            <!-- Histórico de vacinas aqui -->
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="next-title">
+        <h2 id="next-title">Próximas Vacinas</h2>
+        <div id="vaccinesList" class="list" role="list"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="blood-title">
+        <h2 id="blood-title">Doações de sangue</h2>
+        <div id="donationsList" class="list" role="list"></div>
+      </section>
+    </div>
+
+    <aside class="sidebar" aria-labelledby="user-title">
+      <h3 id="user-title">Perfil</h3>
+      <p id="userEmail">—</p>
+      <div class="points-display">
+        <span class="points-icon">🎯</span>
+        <div>
+          <p>Seus pontos:</p>
+          <strong id="points">0</strong>
+        </div>
+      </div>
+      <button id="readDashboard" class="secondary">Ouvir dashboard</button>
+    </aside>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <small>© ImuniTech</small>
+  </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/voice.js" defer></script>
+</body>
+</html>

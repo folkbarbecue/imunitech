@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ImuniTech — Gamificação</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="high-contrast">
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header" role="banner">
+    <h1>ImuniTech</h1>
+    <nav aria-label="Principal">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="reminders.html">Lembretes</a>
+      <a href="info.html">Informações</a>
+      <a href="gamification.html" aria-current="page">Gamificação</a>
+      <a href="index.html" id="logout4">Sair</a>
+    </nav>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="panel" aria-labelledby="progress-title">
+      <h2 id="progress-title">Seu Progresso</h2>
+      <div class="progress-section">
+        <p>Nível <strong id="userLevel">1</strong></p>
+        <div class="progress-bar">
+          <div class="fill" style="width: 0%" id="levelProgress"></div>
+        </div>
+        <p class="muted">Próximo nível em: <span id="nextLevel">100</span> pontos</p>
+      </div>
+      <p class="points">Pontos totais: <strong id="totalPoints">0</strong></p>
+    </div>
+
+    <section class="card" aria-labelledby="badges-title">
+      <h2 id="badges-title">Conquistas</h2>
+      <div id="badges" class="badges" role="list">
+        <!-- Preenchido via JavaScript -->
+      </div>
+      <button id="claimBadge" class="primary">Registrar atividade diária</button>
+    </section>
+
+    <section class="card" aria-labelledby="store-title">
+      <h2 id="store-title">Loja de Recompensas</h2>
+      <p class="muted">Use seus pontos para desbloquear benefícios especiais</p>
+      <div class="store-grid" id="storeItems">
+        <!-- Preenchido via JavaScript -->
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <small>© ImuniTech</small>
+  </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/voice.js" defer></script>
+</body>
+</html>
